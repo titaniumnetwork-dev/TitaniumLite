@@ -1,0 +1,22 @@
+-=+ GoGuardian Web Filter Bypass +=-
+
+
+Setup: Create a bookmark, copy the code provided and paste it in as the URL (name it whatever you want).
+
+
+javascript:(function() {
+window.onbeforeunload=function() {
+return "lol";}})()
+
+
+Instructions for use:
+1. Type in a url into the url bar, or have a link ready.
+2. Press the search key (magnifying glass) and escape key (ESC) at the same time.
+3. Scroll down until you see GoGuardian and/or its logo.
+4. Select GoGuardian and GoGuardian license and click "end process"
+5. VERY QUICKLY enter the url or click the prepared link, then spam the bookmark
+6. When you see a popup saying "Do you want to leave this page?" quickly click "No".
+7. Enjoy!
+
+
+If this doesn't work, message Eli#4511 from the discord.
