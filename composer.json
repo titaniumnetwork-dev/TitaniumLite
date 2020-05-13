@@ -7,11 +7,11 @@
         "repositories": [
                 {
                         "type": "vcs",
-                        "url": "https://github.com/shirtjs/php-proxy"
+                        "url": "https://github.com/titaniumnetwork-dev/php-proxy"
                 }
         ],
         "require": {
-                "shirtjs/php-proxy": "dev-master",
+                "titaniumnetwork-dev/php-proxy": "dev-master",
                 "athlon1600/php-proxy-plugin-bundle": "dev-master",
                 "ext-mbstring": "^7.2",
                 "ext-gd": "^7.2",
