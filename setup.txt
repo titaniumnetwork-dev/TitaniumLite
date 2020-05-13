@@ -31,4 +31,8 @@ file_put_contents($path_config, $config);
 
 echo "New Key: {$key}\r\n";
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 53841d4b201d956a4f805b1d6423a782c3703337

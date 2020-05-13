@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
         "name": "titaniumnetwork-dev/phoenix-reborn",
+=======
+        "name": "titaniumnetwork-dev/TitaniumLite",
+>>>>>>> 53841d4b201d956a4f805b1d6423a782c3703337
         "type": "project",
         "license": "MIT",
         "description": "Web proxy application project powered by PHP-Proxy library",

@@ -23,6 +23,18 @@ This site includes several games out of the box.
 
 You want to have Cloudflare or a similar DNS provider on your domain.
 
+Getting started:
+
+Fork/Download this repository
+
+Pick a hosting service; I recommend Heroku, Nodeclusters, AWS, OVH, and Servercheap for this.
+
+Extract the files, or hook it up to your Github (depends who you choose).
+
+Make sure it's all good and working, if so, change all the cosmetic tidbits on the site so it's ready to be used.
+
+Move onto Node Unblocker
+
 Node Unblocker setup:
 
 Configure a Node Unblocker server, by following the instructions found at https://github.com/nfriedly/nodeunblocker.com
