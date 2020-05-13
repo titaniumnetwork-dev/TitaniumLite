@@ -1,131 +1,107 @@
-
+<style>img[alt*="www.000webhost.com"] {
+    display: none;}
+code made by Titanumnetwork,
+img[alt="www.000webhost.com"]{display:none;}
+</style>
+<html>
 <!DOCTYPE html>
+<html>
+<head>
+<body style="background-color:black;">
+<title>TitaniumNetwork Proxy</title>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="">
-    <title>My Drive - Google Drive</title>
-    <link rel="icon" href="https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_4.ico">
-    <link rel="stylesheet" href="./css/stylesheet.min.css">
-    <style>#error {
-    	color:red;
-    	font-weight:bold;
-    }</style>
-  </head>
-  <body>
-    <header class="header container">
-      <a href="" class="logo">TitaniumNetwork</a>
-      <input class="menu-btn" type="checkbox" id="menu-btn" />
-      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
-      <ul class="menu">
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./s2.html">Games</a></li>
-        <li><a href="./s3.html">Movies</a></li>
-        <li><a href="./about.html">About Us</a></li>
-      </ul>
-    </header>
-        <div class="container">
-          <div class="c-box mainbody">
-        <center>
-          <h1>TitaniumNetwork | Surf Freely</h1>
-          <h2>Browse with Freedom.</h2>
-          <h2>News: Node Unblocker servers are now local to each site! No more waiting for new node servers!</h2>
-          <h2>Type in the website you wish to unblock and press a button, to get going.</h2>
-        </center>
-        <center>
-              <!--<form action="" method="get" id="web-search-box" style="transform:scale(1.1)">-->
-              <form action="./geographic/index.php" id="web-search-box" method="post" style="transform:scale(1.1)">
-							<p>
-                <input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" autocomplete="false" name="url" />&nbsp;<p></p>
-								<input type="submit" style="border:none;border-radius: 5px;padding:10px;width:45px;background:orangered;color:#fff;font-weight:bold;" value="PHP" />
-                <input type="button" id="via" style="border:none;border-radius: 5px;padding:10px;width:45px;background:orangered;color:#fff;font-weight:bold;" value="Via" />
-                <input type="button" id="localnode" style="border:none;border-radius: 5px;padding:10px;width:55px;background:orangered;color:#fff;font-weight:bold;" value="Node" />
-                <?php
-                $server1= "https://node.trashmic.gq";
-                $server2= "https://node.toothbrush.ml";
-                $server3= "https://node.androids.gq";
-                $server4= "https://node.ipodnanos.gq";
-                $array1= array($server1,$server2,$server3,$server4,$server1,$server2,$server3,$server4);
-                $rand_keys = array_rand($array1,2);
-                $oldsmobile = $array1[$rand_keys[0]];
-                ?>
+<meta name="generator" content="php-proxy.com">
+<meta name="version" content="<?=$version;?>">
 
-                <script>
+<style type="text/css">
+html body {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;
+}
+
+#container {
+	width:500px;
+	margin:0 auto;
+	margin-top:150px;
+}
+
+#error {
+	color:red;
+	font-weight:bold;
+}
+
+#frm {
+	padding:10px 15px;
+	background-color:#1f1f14;
+
+	border:1px solid #6600ff;
+
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+#footer {
+	text-align:center;
+	font-size:10px;
+	margin-top:35px;
+	clear:both;
+}
+</style>
+
+</head>
+
+<body>
 
 
-                  function $(id) {
+<div id="container">
 
-                    return document.getElementById(id);
-                  }
-                  var url = window.location.hostname;
-                    var domain = url.replace('www.','').split(/[/?#]/)[0];
+	<div style="text-align:center;">
+		<h1 style="color:purple;">Titanium Network Proxy</h1>
+    <h1 style="color:purple;">Fallback Page</h1>
+                <h1 style="color:green;">Local PHP-Proxy</h1>
+		<h3 style="color:blue;">Using the titaniumnetwork proxy will allow you to anonymously visit any site you wish. Due to its anonymous nature, you can even unblock websites that are blocked by school and work firewalls!</h3>
+	</div>
 
-                  document.getElementById('localnode').onclick = function localnode() {
-                    var url = $('url').value;
-                    //this is the URL for the server
-                    window.location.href = "https://" + "node" + "." + domain + "/" + "textbooks" + "/" + url;
-                    return false;
-                  };
-                  
-                  document.getElementById('via').onclick = function viashit() {
-                    var url = $('url').value;
-                    //this is the URL for the server
-                    window.location.href = "https://" + "c" + "." + domain + "/" + url;
-                    return false;
-                  };
-                  
-                    document.getElementById('nu1').onclick = function Noder() {
-                      var mikelime = "<?php echo $oldsmobile ?>";
-                    var url = $('url').value;
-                    //this is the URL for the server
-                    window.location.href = mikelime + "/textbooks/" + url;
-                    return false;
-                  };
-                  
-                  
-                  
-                  
-                  
-                  window.onload = function() {
-                    $('url').focus();
-                  }
+	<?php if(isset($error_msg)){ ?>
 
-                </script>
-							</p>
-						</form>
+	<div id="error">
+		<p><?php echo $error_msg; ?></p>
+	</div>
 
-            	<?php if(isset($error_msg)){ ?>
-            	<div id="error">
-            		<p><?php echo $error_msg; ?></p>
-            	</div>
-            	<?php } ?>
-          </center>
-	  		<center>
+	<?php } ?>
 
-          <h3>Info:</h3>
-            <h4>-(PHP) PHP Proxy: Local proxy script that is capable of proxifying static websites.</h4>
-            <h4>-(Node) Node Unblocker: Highly capable proxy that is capable of proxifying dynamic websites and games.</h4>
-            <h4>-(Via) Via Proxy: Highly capable proxy that is capable of proxifying many dynamic websites and .io games, whilst usually keeping working sign-in functionality.</h4>
-            <h4>TitaniumNetwork's servers are based in Canada and the U.S, therefore, if you are region-locked or blocked from accessing your content, in a different country, TitaniumNetwork can unblock blocked Canadian/US content.</h4>
-            <h3>Server Status (automatic pinging is being worked on):</h3>
-            <h4>Local PHP-Proxy: (<span style="color: green">Running...</span>)</h4>
-            <?php
-            echo "<h4>Node Server: (<span style='color: green'>Running...</span>)</h4>";
-            echo "<h4>Via Server: (<span style='color: green'>Running...</span>)</h4>";
-            ?>
-                        <div class="d-box">
-              <h1>Official Support List:</h1>
-              <h3>Invidio.us (Video Streaming) | (Node), (Via)</h3>
-              <h3>Google.com (Search Engine) | (Node), (Via), (PHP)</h3>
-              <h3>Startpage.com (Search Engine) | (Node), (Via), (PHP)</h3>
-              <h3>Andkon.com (Games Site) | (Node), (Via)</h3>
-              <h3>YouTube.com (Video Streaming) | (PHP), (Via)</h3>
-            </div>
-        </center>
-      </div>
-    </div>
-        </body>
+	<div id="frm">
+
+	<!-- I wouldn't touch this part -->
+
+		<form action="index.php" method="post" style="margin-bottom:0;">
+			<input name="url" type="text" style="width:400px;" autocomplete="off" placeholder="http://" />
+			<input type="submit" value="Go" />
+		</form>
+
+		<script type="text/javascript">
+			document.getElementsByName("url")[0].focus();
+		</script>
+
+	<!-- [END] -->
+
+	</div>
+
+</div>
+	<div style="text-align:center;">
+		<h2 style="color:blue;">Websites that can be unblocked include the following : </h2>
+		<h3 style="color:green;">Youtube</h3>
+		<h3 style="color:green;">Reddit</h3>
+		<h3 style="color:green;">Twitter</h3>
+		<h3 style="color:green;">Dailymotion</h3>
+		<h3 style="color:green;">Liveleaks</h3>
+		<h3 style="color:green;">And many more!</h3>
+	    </div
+<div id="footer">
+	Powered by <a href="#" target="_blank">TitaniumNetwork</a>
+</div>
+
+
+</body>
 </html>
