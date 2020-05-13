@@ -29,7 +29,7 @@ if (!function_exists('curl_version')) {
 if (Config::get('url_mode') == 2) {
     Config::set('encryption_key', md5(Config::get('app_key') . $_SERVER['REMOTE_ADDR']));
 } elseif (Config::get('url_mode') == 3) {
-    Config::set('encryption_key', md5(Config::get('app_key') . session_id() . $_SERVER['REMOTE_ADDR'] . session_id()));
+    Config::set('encryption_key', md5(Config::get('app_key') . session_id()));
 }
 
 // very important!!! otherwise requests are queued while waiting for session file to be unlocked
@@ -64,7 +64,7 @@ if (isset($_POST['url'])) {
         header("Location: " . Config::get('index_redirect'));
 
     } else {
-		include('../s1.html');
+		include('show.php');
 		//header("Location: ../", true, 301);
         //echo render_template("./templates/main.php", array('version' => Proxy::VERSION));
     }
@@ -121,7 +121,7 @@ try {
 	}
 	// request sent to index.php
 	$request = Request::createFromGlobals();
-
+	
 	// remove all GET parameters such as ?q=
 	$request->get->clear();
 	// forward it to some other URL
@@ -130,24 +130,19 @@ try {
 	// if that was a streaming response, then everything was already sent and script will be killed before it even reaches this line
 	$response->send();
 } catch (Exception $ex) {
-  // if the site is on server2.proxy.com then you may wish to redirect it back to proxy.com
-     if (Config::get("error_redirect")) {
 
-         $url = render_string(Config::get("error_redirect"), array(
-             'error_msg' => rawurlencode($ex->getMessage())
-         ));
+    // if the site is on server2.proxy.com then you may wish to redirect it back to proxy.com
+    if (Config::get("error_redirect")) {
 
-         // Cannot modify header information - headers already sent
-         header("HTTP/1.1 302 Found");
-         header("Location: {$url}");
+        $url = render_string(Config::get("error_redirect"), array(
+            'error_msg' => rawurlencode($ex->getMessage())
+        ));
 
-     } else {
+        // Cannot modify header information - headers already sent
+        header("HTTP/1.1 302 Found");
+        header("Location: {$url}");
 
-         echo render_template("./templates/main.php", array(
-             'url' => $url,
-             'error_msg' => $ex->getMessage(),
-             'version' => Proxy::VERSION
-         ));
-
-     }
- }
+    } else {
+		echo 'ERR: '.$ex->getMessage();
+    }
+}

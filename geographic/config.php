@@ -4,10 +4,10 @@
 $config = array();
 
 // a unique key that identifies this application - DO NOT LEAVE THIS EMPTY!
-$config['app_key'] = 'skldfsdfnjsdfhnsdifsdufhuisdhfuidshfiudshfu';
+$config['app_key'] = 'keyz';
 
 // a secret key to be used during encryption
-$config['encryption_key'] = 'sdousdhufuiewr89314719h2uibawdbu14987134yoldsmobile8r12y3984h';
+$config['encryption_key'] = 'subwoofer';
 
 // URL running the proxy app
 //$config['app_url'] = 'https://www.mysampleproxy.com/proxyfolder/';
@@ -33,19 +33,24 @@ $config['plugins'] = array(
 	// site specific plugins below
 	'Youtube',
 	'DailyMotion',
+	'RedTube',
+	'XHamster',
+	'XVideos',
+	'Xnxx',
+	'Pornhub',
 	'Twitter'
 );
 
 // additional curl options to go with each request
 $config['curl'] = array(
 	// CURLOPT_PROXY => '',
-	CURLOPT_CONNECTTIMEOUT => 15
+	// CURLOPT_CONNECTTIMEOUT => 5
 );
 
-$config['replace_title'] = 'TN Browser';
+//$config['replace_title'] = 'Google Search';
 
 //$config['error_redirect'] = "https://unblockvideos.com/#error={error_msg}";
-$config['index_redirect'] = '/';
+//$config['index_redirect'] = 'https://unblockvideos.com/';
 
 // $config['replace_icon'] = 'icon_url';
 
