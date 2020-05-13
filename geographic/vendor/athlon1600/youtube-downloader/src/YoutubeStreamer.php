@@ -8,7 +8,7 @@ class YoutubeStreamer
     protected $buffer_size = 256 * 1024;
 
     protected $headers = array();
-    protected $headers_sent = false;
+    protected $headers_sent = true;
 
     protected $debug = false;
 
