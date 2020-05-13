@@ -16,6 +16,11 @@ class YouTubeDownloader
         $this->client = new Browser();
     }
 
+    public function getBrowser()
+    {
+        return $this->client;
+    }
+
     public function getLastError()
     {
         return $this->error;
@@ -173,7 +178,7 @@ class YouTubeDownloader
         return null;
     }
 
-    public function getDownloadLinks($video_id, $selector = true)
+    public function getDownloadLinks($video_id, $selector = false)
     {
         $this->error = null;
 
@@ -182,7 +187,7 @@ class YouTubeDownloader
         if (strpos($page_html, 'We have been receiving a large volume of requests') !== false ||
             strpos($page_html, 'systems have detected unusual traffic') !== false) {
 
-            $this->error = 'TitaniumNetwork YouTube has encountered an error: HTTP 429: Too many requests. (Too many users and YouTube is rate-limiting us)';
+            $this->error = 'HTTP 429: Too many requests.';
 
             return array();
         }

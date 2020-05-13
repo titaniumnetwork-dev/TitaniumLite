@@ -1,5 +1,5 @@
 {
-        "name": "titaniumnetwork-dev/phoenix-reborn",
+        "name": "titaniumnetwork-dev/titaniumlite",
         "type": "project",
         "license": "MIT",
         "description": "Web proxy application project powered by PHP-Proxy library",
@@ -7,13 +7,14 @@
         "repositories": [
                 {
                         "type": "vcs",
-                        "url": "https://github.com/titaniumnetwork-dev/php-proxy"
+                        "url": "https://github.com/Athlon1600/php-proxy-app"
                 }
         ],
         "require": {
-                "titaniumnetwork-dev/php-proxy": "dev-master",
-                "athlon1600/php-proxy-plugin-bundle": "dev-master",
+                "Athlon1600/php-proxy": "dev-master",
+                "Athlon1600/php-proxy-plugin-bundle": "dev-master",
                 "ext-mbstring": "^7.2",
+                "Athlon1600/php-proxy": "^5.0",
                 "ext-gd": "^7.2",
                 "ext-sqlite3": "^7.2",
                 "ext-imagick": "*"
