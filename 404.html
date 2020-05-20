@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TitaniumNetwork</title>
+    <link href="./css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  </head>
+  <body>
+    <header><div class="navbar" id="mynavbar">
+      <a href="" class="logo">TitaniumNetwork</a>
+  <a href="#" onclick="openPage(event, 'contact')">Contact</a>
+  <a href="#" onclick="openPage(event, 'games')" ondblclick="gframe.src = gframe.src;">Games</a>
+  <a href="#" id="indexPage" onclick="openPage(event, 'index') ">Home</a>
+  <a href="javascript:void(0);" class="icon" onclick="borger()">
+
+    <i class="fa fa-bars"></i>
+  </a>
+</div></header>
+    <main>
+    <!-- Tab content -->
+    <!-- index-->
+<div id="index" class="tabcontent">
+  <div class="centerh containerc">
+  <h1>Not Found</h1>
+  <h4>Try one of these pages:</h4>
+  <a href="#" onclick="openPage(event, 'selection')" class="button">Surf Freely</a>
+  <a href="#" onclick="openPage(event, 'bookmarklets')" class="button">Bookmarklets</a>
+  <a href="#" onclick="openPage(event, 'forum')" class="button">Community Forum</a>
+</div>
+</div>
+<!-- end of index-->
+<!-- games-->
+<div id="games" class="tabcontent">
+  <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" id="gframe" src="./games.html"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+</div>
+<!-- end of games-->
+<!-- contact-->
+<div id="contact" class="tabcontent">
+  <main><div class="centerh containerc">
+    <h1>The maintainer has not input their contact info, unfortunately.</h1>
+  </div>
+  </main>
+</div>
+<!-- end of contact-->
+<!--Bookmarklets-->
+<div id="bookmarklets" class="tabcontent">
+  <main><div class="centerh containerc">
+    <h1>TitaniumNetwork</h1>
+    <h2>Bookmarklets</h2>
+    <h4>These bookmarklets are little scripts you put in your bookmarks bar to do cool stuff!</h4>
+    <h4>Setup of these bookmarklets is simple and it can get past tools like Hapara Highlights!</h4>
+    <h4>Select a Bookmarklet below to view its code!</h4>
+    <a href="./public-txt/gdrive.txt" class="button">Google Drive Cloak</a>
+    <a href="./public-txt/gg.txt" class="button">GoGuardian Bypass</a>
+    <a href="./public-txt/portaprox.txt" class="button">PortaProxy</a>
+  </div>
+  </main>
+</div>
+<!--end of Bookmarklets-->
+
+
+<!-- Surf Freely-->
+<div id="selection" class="tabcontent">
+  <div class="c-box containerb">
+  <center>
+  <h1>Surf Freely</h1>
+  <h2>Browse with Freedom.</h2>
+  <h2>Type in the website you wish to unblock and press a button, to get going.</h2>
+  </center>
+  <center>
+      <!--<form action="" method="get" id="web-search-box" style="transform:scale(1.1)">-->
+      <form action="./geographic/index.php" id="web-search-box" method="post" style="transform:scale(1.1)">
+      <p>
+        <input type="text" placeholder="Enter URL" style="border:none;border-radius: 5px;padding:10px;" id="url" autocomplete="false" name="url" />&nbsp;<p></p>
+        <input type="button" id="localnode" class="selbuttonsbigger" value="Node" />
+        <input type="submit" class="selbuttons" value="PHP" />
+        <script>
+
+          function $(id) {
+
+            return document.getElementById(id);
+          }
+          var url = window.location.hostname;
+            var domain = url.replace('www.','').split(/[/?#]/)[0];
+            //Node button
+          document.getElementById('localnode').onclick = function localnode() {
+            var url = $('url').value;
+            //this is the URL for the server
+            window.location.href = "https://" + "node" + "." + domain + "/" + "textbooks" + "/" + url;
+            return false;
+          };
+
+          window.onload = function() {
+            $('url').focus();
+          }
+          //these are the shortcut buttons
+          function invidiokey(){document.getElementById("url").value = "invidio.us";}
+          function googlekey(){document.getElementById("url").value = "google.com";}
+          function startpagekey(){document.getElementById("url").value = "startpage.com";}
+          function andkonkey(){document.getElementById("url").value = "andkon.com";}
+          function youtubekey(){document.getElementById("url").value = "youtube.com";}
+        </script>
+      </p>
+    </form>
+  </center>
+  <center>
+  <h3>Info:</h3>
+    <h4>-PHP Proxy (PHP): Local proxy script that is capable of proxifying static websites.</h4>
+    <h4>-Node Unblocker (Node): Highly capable proxy that is capable of proxifying dynamic websites and games.</h4>
+    <h3>Server Status:</h3>
+    <h4>Node Server: (<span style='color: yellow'>PLEASE SET VALUE...</span>)</h4>
+    <h4>PHP-Proxy: (<span style="color: yellow">PLEASE SET VALUE...</span>)</h4>
+                <div class="d-box">
+      <h1>Support List:</h1>
+      <h3><a href="#" onclick="invidiokey()">Invidious</a> (Video Streaming) |<cctb>Node</cctb></h3>
+      <h3><a href="#" onclick="googlekey()">Google</a> (Search Engine) | <cctb>Node</cctb> <cctb>PHP</cctb></h3>
+      <h3><a href="#" onclick="startpagekey()">Startpage</a> (Search Engine) | <cctb>Node</cctb>  <cctb>PHP</cctb></h3>
+      <h3><a href="#" onclick="andkonkey()">Andkon</a> (Gaming) | <cctb>Node</cctb> </h3>
+      <h3><a href="#" onclick="youtubekey()">YouTube</a> (Video Streaming) |<cctb>PHP</cctb></h3>
+    </div>
+  </center>
+  </div>
+</div>
+<!-- end of the proxy page-->
+<div id="forum" class="tabcontent">
+    <iframe allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" src="https://fermiparadox.gq"  style="position:fixed; top:50px; left:0px; bottom:0px; right:0px; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:9;"></iframe>
+</div>
+
+
+    </main>
+    <footer></footer>
+  </body>
+</html>
+<!--has to be at the end to function-->
+<script src="js/primary.js"></script>
