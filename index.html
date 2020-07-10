@@ -80,30 +80,29 @@
         <input type="button" id="localnode" class="selbuttonsbigger" value="Node" />
         <input type="submit" class="selbuttons" value="PHP" />
         <script>
+var host=location.hostname.split('.'),
+	purl=location.hostname,
+	ifr=document.getElementById('ifr');
+if(host.length==3){
+	purl=`${host[1]}.${host[2]}`;
+}
+var nde=document.getElementById('localnode'),
+    url=document.getElementById('url');
 
-          function $(id) {
+nde.addEventListener('click',()=>{
+  window.location.href = "https://node."+purl+"/textbooks/" + url.value;
+});
 
-            return document.getElementById(id);
-          }
-          var url = window.location.hostname;
-            var domain = url.replace('www.','').split(/[/?#]/)[0];
-            //Node button
-          document.getElementById('localnode').onclick = function localnode() {
-            var url = $('url').value;
-            //this is the URL for the server
-            window.location.href = "https://" + "node" + "." + domain + "/" + "textbooks" + "/" + url;
-            return false;
-          };
+window.addEventListener('load', ()=>{
+  url.focus();
+});
 
-          window.onload = function() {
-            $('url').focus();
-          }
-          //these are the shortcut buttons
-          function invidiokey(){document.getElementById("url").value = "invidio.us";}
-          function googlekey(){document.getElementById("url").value = "google.com";}
-          function startpagekey(){document.getElementById("url").value = "startpage.com";}
-          function andkonkey(){document.getElementById("url").value = "andkon.com";}
-          function youtubekey(){document.getElementById("url").value = "youtube.com";}
+//these are the shortcut buttons
+function invidiokey(){document.getElementById("url").value = "invidio.us";}
+function googlekey(){document.getElementById("url").value = "google.com";}
+function startpagekey(){document.getElementById("url").value = "startpage.com";}
+function andkonkey(){document.getElementById("url").value = "andkon.com";}
+function youtubekey(){document.getElementById("url").value = "youtube.com";}
         </script>
       </p>
     </form>
