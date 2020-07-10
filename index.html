@@ -100,7 +100,7 @@ window.addEventListener('load', ()=>{
 //these are the shortcut buttons
 Array.from(document.getElementsByClassName('preset')).forEach((e,i)=>{ // loop through presets...
 	var urlData=e.getAttribute('data'); // the data valueee
-	e.addEventListener('click', ()=>{ // when preset gets clicked
+	e.parentNode.addEventListener('click', ()=>{ // when preset gets clicked
 		url.value=urlData;
 	});
 });
