@@ -98,11 +98,12 @@ window.addEventListener('load', ()=>{
 });
 
 //these are the shortcut buttons
-function invidiokey(){document.getElementById("url").value = "invidio.us";}
-function googlekey(){document.getElementById("url").value = "google.com";}
-function startpagekey(){document.getElementById("url").value = "startpage.com";}
-function andkonkey(){document.getElementById("url").value = "andkon.com";}
-function youtubekey(){document.getElementById("url").value = "youtube.com";}
+Array.from(document.getElementsByClassName('preset')).forEach((e,i)=>{ // loop through presets...
+	var urlData=e.getAttribute('data'); // the data valueee
+	e.addEventListener('click', ()=>{ // when preset gets clicked
+		url.value=urlData;
+	});
+});
         </script>
       </p>
     </form>
@@ -116,11 +117,11 @@ function youtubekey(){document.getElementById("url").value = "youtube.com";}
     <h4>PHP-Proxy: (<span style="color: yellow">PLEASE SET VALUE...</span>)</h4>
                 <div class="d-box">
       <h1>Support List:</h1>
-      <h3><a href="#" onclick="invidiokey()">Invidious</a> (Video Streaming) |<cctb>Node</cctb></h3>
-      <h3><a href="#" onclick="googlekey()">Google</a> (Search Engine) | <cctb>Node</cctb> <cctb>PHP</cctb></h3>
-      <h3><a href="#" onclick="startpagekey()">Startpage</a> (Search Engine) | <cctb>Node</cctb>  <cctb>PHP</cctb></h3>
-      <h3><a href="#" onclick="andkonkey()">Andkon</a> (Gaming) | <cctb>Node</cctb> </h3>
-      <h3><a href="#" onclick="youtubekey()">YouTube</a> (Video Streaming) |<cctb>PHP</cctb></h3>
+      <h3><a href="#" class="preset" data="invidio.us">Invidious</a> (Video Streaming) |<cctb>Node</cctb></h3>
+      <h3><a href="#" class="preset" data="google.com">Google</a> (Search Engine) | <cctb>Node</cctb> <cctb>PHP</cctb></h3>
+      <h3><a href="#" class="preset" data="startpage.com">Startpage</a> (Search Engine) | <cctb>Node</cctb>  <cctb>PHP</cctb></h3>
+      <h3><a href="#" class="preset" data="andkon.com">Andkon</a> (Gaming) | <cctb>Node</cctb> </h3>
+      <h3><a href="#" class="preset" data="youtube.com">YouTube</a> (Video Streaming) |<cctb>PHP</cctb></h3>
     </div>
   </center>
   </div>
